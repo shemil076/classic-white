@@ -34,6 +34,7 @@ body {
 }
 
 .product{
+    /* height: 30rem; */
     max-height: 100%;
     max-width: 100%;
 }
@@ -86,14 +87,8 @@ body {
     font-family: 'Times New Roman', Times, serif;
   }
 
-.buttons{
-    display: flex;
-    gap:1.5rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-  }
   
- .buttons a{
+ .cart-button {
     flex:1 1 16rem;
     padding:1rem;
     font-size: 1rem;
@@ -102,12 +97,12 @@ body {
     font-family: 'Times New Roman', Times, serif;
   }
   
-.buttons a.cart{
+.cart-button{
     background: #444;
     color:#fff;
   }
   
- .buttons a.cart:hover{
+ .cart-button:hover{
     background: #111;
   }
 

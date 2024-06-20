@@ -143,7 +143,7 @@ const products = [
   
 ];
 
-const productsPerPage = 10; // Number of products per page
+const productsPerPage = 12; // Number of products per page
 let currentPage = 1; // Current page
 
 // Function to display products with pagination
@@ -164,10 +164,13 @@ function displayProducts(productList, page = 1) {
         <div class="products-container">
           <div class="product" data-name="p-2">
             <img src=${product.imageUrl} alt="product image">
-            <h3 style="font-family: 'Times New Roman', Times, serif;">${product.title}</h3>
-            <div class="price" style="padding-bottom: 10px; font-family: 'Times New Roman', Times, serif;">LKR ${product.price}</div>
-            <div class="buttons">
-              <a href="#" class="cart">Add to Cart</a>
+            <div>
+              <h3 style="font-family: 'Times New Roman', Times, serif;">${product.title}</h3>
+              <div>
+                <div class="price" style="padding-bottom: 10px; font-family: 'Times New Roman', Times, serif;">LKR ${product.price}</div>
+ 
+                <div class="cart-button" data-title="${product.title}" data-price="${product.price}" data-image-url="${product.imageUrl}">Add to Cart</div>
+              </div>
             </div>
           </div>
         </div>
@@ -177,7 +180,9 @@ function displayProducts(productList, page = 1) {
     productContainer.appendChild(productItem);
   });
 
+// <button class="add-to-cart-btn" data-title="${product.title}" data-price="${product.price}" data-image-url="${product.imageUrl}">Add to Cart</button>
   updatePaginationInfo(page, productList.length);
+  setupEventListeners(); // Set up event listeners for the new buttons
 }
 
 // Function to update pagination info
@@ -190,9 +195,12 @@ function updatePaginationInfo(page, totalProducts) {
 
 // Set up event listeners
 function setupEventListeners() {
-  document.querySelectorAll("#add-to-cart-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Product added to cart!");
+  document.querySelectorAll(".cart-button").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const title = event.target.dataset.title;
+      const price = event.target.dataset.price;
+      const imageUrl = event.target.dataset.imageUrl;
+      addToCart({ title, price, imageUrl });
     });
   });
 
@@ -212,8 +220,15 @@ function setupEventListeners() {
   });
 }
 
+// Function to add items to the cart
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Product added to cart!");
+}
+
 // Initialize the page
 document.addEventListener("DOMContentLoaded", () => {
   displayProducts(products, currentPage);
-  setupEventListeners();
 });
