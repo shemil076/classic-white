@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ACW</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+            publicKey: "T5sGGmC8DNAh_sBX7",
+        });
+        })();
+    </script>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <header class="header">
+        <a href="./index.html" class="logo"><img src="./Images/logo.jpeg" alt="Logo of Amaya Resorts"></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./AboutUs.html">About Us</a></li>
+                <li><a href="./Products.html">Products</a></li>
+                <li><a href="./ContactUs.html">Contact Us</a></li>
+                <li><a href="./Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <form>
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email_id" name="email_id" placeholder="Your Email" required>
+            <input type="text" id="contact" name="contact" placeholder="Contact Number" required>
+            <textarea id="message" name="message" rows="5" placeholder="Send Your message to us" required></textarea>
+            <button type="button" onclick="SendMail()">Send</button>
+        </form>
+
+    </div>
+    
+</body>
+<script src="./script.js"></script>
+</html>

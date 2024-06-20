@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./aboutus.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <header class="header">
+      <a href="./index.html" class="logo"
+        ><img src="./Images/logo.jpeg" alt="Logo of Amaya Resorts"
+      /></a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./AboutUs.html">About Us</a></li>
+        <li><a href="./Products.html">Products</a></li>
+        <li><a href="./ContactUs.html">Contact Us</a></li>
+        <li>
+          <a href="./Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <!--Main Image and Main text-->
+    <section class="home">
+      <section class="content">
+        <h1 class="animation" style="font-family: 'Times New Roman', Times, serif;">Products</h1>
+      </section>
+    </section>
+
+
+     <!-- <div class="container">
+        <div class="products-container">
+            <div class="product" data-name="p-2" style="height: 20rem;">
+                <img style="height: 12rem" src="ML_R9882.jpg" alt="">
+                <h3>RADIANT & PROTECTIVE BRIGHTENING DAYTIME BODY LOTION</h3>
+                <div class="price">LKR 3150</div>
+             </div>
+         </div>
+     </div> -->
+    
+    
+    
+     <div>
+        <div id="product-list" class="product-list"></div>
+        <div class="pagination">
+          <button id="prev-page" class="pagination-btn">Previous</button>
+          <span id="page-info"></span>
+          <button id="next-page" class="pagination-btn">Next</button>
+        </div>
+      </div>
+      
+
+    <script src="productScript.js"></script>
+  </body>
+</html>

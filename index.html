@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ACW</title>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <header class="header">
+        <a href="./index.html" class="logo"><img src="./Images/logo.jpeg" alt="Logo of Amaya Resorts"></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./AboutUs.html">About Us</a></li>
+                <li><a href="./Products.html">Products</a></li>
+                <li><a href="./ContactUs.html">Contact Us</a></li>
+                <li><a href="./Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </header>
+    <!--Main Image and Main text-->
+    <section class="home">
+        <section class="content">
+            <h4 class="animation">Advanced</h4>
+            <h1 class="animation">Classic White</h1>
+        
+            <a href="./Products.html" class="btn">Discover More</a>
+        </section>
+    </section>
+
+    <!--Product Showcase-->
+    <div class="container">
+
+        <h3 class="title"> Featured Products </h3>
+     
+        <div class="products-container">
+     
+           <div class="product" data-name="p-1">
+              <img src="./Images/charcoal-face-pack.png" alt="">
+              <h3>BRIGHTENING & REJUVINATING ACTIVATED CHARCOAL PACK</h3>
+              <div class="price">LKR 1600</div>
+           </div>
+     
+           <div class="product" data-name="p-2">
+              <img src="./Images/day-time-lotion.png" alt="">
+              <h3>RADIANT & PROTECTIVE BRIGHTENING DAYTIME BODY LOTION</h3>
+              <div class="price">LKR 3150</div>
+           </div>
+     
+           <div class="product" data-name="p-3">
+              <img src="./Images/night-time-lotion.png" alt="">
+              <h3>REJUVINATING & BRIGHTENING NIGHT-TIME BODY LOTION </h3>
+              <div class="price">LKR 3300</div>
+           </div>
+     
+           <div class="product" data-name="p-4">
+              <img src="./Images/turmeric_cream.png" alt="">
+              <h3>GOLDEN RADIANCE TURMERIC CREAM </h3>
+              <div class="price">LKR 2900</div>
+           </div>
+<!--      
+           <div class="product" data-name="p-5">
+              <img src="./Images/charcoal-face-pack.png" alt="">
+              <h3>broccoli</h3>
+              <div class="price">$2.00</div>
+           </div> -->
+     
+           <!-- <div class="product" data-name="p-6">
+              <img src="./Images/pigment-control-cream.png" alt="">
+              <h3>potatoes</h3>
+              <div class="price">$2.00</div>
+           </div> -->
+     
+        </div>
+     
+     </div>
+     
+     <div class="products-preview">
+     
+        <div class="preview" data-target="p-1">
+           <i class="fas fa-times"></i>
+           <img src="./Images/charcoal-face-pack.png" alt="">
+           <h3>BRIGHTENING & REJUVINATING ACTIVATED CHARCOAL PACK</h3>
+           <!-- <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div> -->
+           <p>Formulated with hyaluronic acid, glycolic acid, and vitamin E 
+            to nourish and rejuvenate. Achieve a brighter complexion 
+            and revitalized skin with the purifying power of activated 
+            charcoal.</p>
+           <div class="price">LKR 1600</div>
+           <div class="buttons">
+              <a href="#" class="buy">Buy Now</a>
+              <a href="#" class="cart">Add to Cart</a>
+           </div>
+        </div>
+     
+        <div class="preview" data-target="p-2">
+           <i class="fas fa-times"></i>
+           <img src="./Images/day-time-lotion.png" alt="">
+           <h3>RADIANT & PROTECTIVE BRIGHTENING DAYTIME BODY LOTION</h3>
+           <!-- <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div> -->
+           <p>During the day, indulge in our Radiant & Protective Brightening Daytime 
+            Body Lotion. Lightweight and fast absorbing, this soft and smooth lotion is 
+            enriched with vitamin E and castor oil to nourish and protect your skin 
+            throughout the day.</p>
+           <div class="price">LKR 3150</div>
+           <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" class="cart">Add to Cart</a>
+           </div>
+        </div>
+     
+        <div class="preview" data-target="p-3">
+           <i class="fas fa-times"></i>
+           <img src="./Images/night-time-lotion.png" alt="">
+           <h3>REJUVINATING & BRIGHTENING NIGHT-TIME BODY LOTION </h3>
+           <!-- <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div> -->
+           <p>A luxurious blend infused with bee honey and vitamin A to deeply nourish 
+            and revitalize your skin while you sleep. This advanced formula goes 
+            beyond moisturization, working to even out skin tone and promote a 
+            radiant complexion.</p>
+           <div class="price">LKR 3300</div>
+           <div class="buttons">
+              <a href="#" class="buy">Buy Now</a>
+              <a href="#" class="cart">Add to Cart</a>
+           </div>
+        </div>
+     
+        <div class="preview" data-target="p-4">
+           <i class="fas fa-times"></i>
+           <img src="./Images/turmeric_cream.png" alt="">
+           <h3>GOLDEN RADIANCE TURMERIC CREAM </h3>
+           <!-- <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div> -->
+           <p></p>
+           <div class="price">LKR 3850</div>
+           <div class="buttons">
+              <a href="#" class="buy">Buy now</a>
+              <a href="#" class="cart">Add to Cart</a>
+           </div>
+        </div>
+     
+        <!-- <div class="preview" data-target="p-5">
+           <i class="fas fa-times"></i>
+           <img src="images/charcoal-face-pack.png" alt="">
+           <h3>organic broccoli</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" class="cart">add to cart</a>
+           </div>
+        </div> -->
+     
+        <!-- <div class="preview" data-target="p-6">
+           <i class="fas fa-times"></i>
+           <img src="images/day-time-lotion.png" alt="">
+           <h3>organic potatoes</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" class="cart">add to cart</a>
+           </div>
+        </div> -->
+     
+     </div>
+</body>
+<script src="./script.js"></script>
+</html>
