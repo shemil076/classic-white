@@ -121,7 +121,7 @@ header.scrolled ul{
     display: none;
 }
 .header .menu-btn:checked ~ .menu{
-    max-height: 240px;
+    max-height: 400px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .nav-icon{
@@ -239,6 +239,7 @@ h1.animation, h4.animation {
     text-align: center;
     color: #fff;
     border-radius: 100px;
+    font-size: clamp(20px,1.5vw,50px);
     width: 180px;
     background-color: #ba806a;
     overflow: hidden;
@@ -312,6 +313,8 @@ h1.animation, h4.animation {
   text-align: center;
   padding:3rem 2rem;
   background:url(./Images/card-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
   outline: .1rem solid #ccc;
   outline-offset: -1.5rem;

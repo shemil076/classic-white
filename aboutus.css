@@ -201,6 +201,7 @@
     background: rgba(255, 255, 255, 0.21);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    transition: 0.5s ease-in;
 }
 
 .vision-container:hover{
@@ -350,9 +351,39 @@
 
 
 }
+
+
+.content .contentBx1 h3{
+  text-transform: uppercase;
+  color: #ebe8e8;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 15px;
+  line-height: 1.1em;
+  transition: 0.5s;
+  transition-delay: 0.6s;
+  opacity: 0;
+  transform: translateY(-20px);
+  font-weight: bold;
+  -webkit-text-stroke: #000000 0.1px ;
+}
+
+.card:hover .content .contentBx1 h3 {
+  opacity: 1;
+  transform: translateY(0);
+
+}
+.content .contentBx1 h3 span{
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
 .content .contentBx h3{
     text-transform: uppercase;
-    color: #fffefe;
+    color: #292929;
     letter-spacing: 2px;
     font-weight: 500;
     font-size: 20px;
