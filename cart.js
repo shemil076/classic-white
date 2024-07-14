@@ -132,16 +132,24 @@ function sendOrderEmail() {
     return;
   }
 
+  const items = cart.map(product => ({
+    title: product.title,
+    quantity: product.quantity,
+    price: product.price,
+    total: product.price * product.quantity
+  }));
+
+  const totalAmount = document.getElementById("total-amount").textContent;
+
   const templateParams = {
-    to_name: 'Owner', // Replace with recipient's name
-    from_name: 'Customer', // Replace with sender's name
-    items: cart,
-    total_amount: document.getElementById("total-amount").textContent,
+    items: JSON.stringify(items), // Ensure items are correctly passed as an array
+    total_amount: totalAmount,
     billing_address: billingAddress,
     telephone_number: telephoneNumber
   };
 
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+  emailjs.init('GMfVEHC7b35kbtHM4');
+  emailjs.send('service_k0uvgo5', 'template_in6jdeu', templateParams)
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       alert('Order confirmed! An email has been sent.');
@@ -151,6 +159,10 @@ function sendOrderEmail() {
       alert('Failed to send order confirmation email.');
     });
 }
+
+
+
+
 
 // Initialize the cart page
 document.addEventListener("DOMContentLoaded", () => {
